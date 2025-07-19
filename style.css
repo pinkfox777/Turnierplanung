@@ -1,0 +1,197 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 800px;
+    gap: 10px;
+}
+
+h1, h2, h3 {
+    color: #624185; /* Lila */
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #624185; /* Lila */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(98, 65, 133, 0.15);
+}
+
+button:hover {
+    background: #ffa345; /* Orange */
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(255, 163, 69, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button.yes, button.no {
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    transition: outline 0.2s;
+}
+
+button.yes {
+    background: #4caf50; /* Grün für Ja */
+}
+
+button.no {
+    background: #f44336; /* Rot für Nein */
+}
+
+button.active {
+    outline: 2px solid #007bff; /* Blauer Rahmen für aktiven Button */
+    outline-offset: 2px;
+}
+
+.event {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 600px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.event:hover {
+    box-shadow: 0 4px 12px rgba(98, 65, 133, 0.1);
+    transform: translateY(-1px);
+}
+
+.status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.green { background: #4caf50; }
+.red { background: #f44336; }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close {
+    color: #bbb;
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    border-color: #624185;
+    outline: none;
+}
+
+form section {
+    margin-bottom: 20px;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-group label {
+    margin-right: 10px;
+}
+
+.orange { color: #ffa345; font-weight: bold; }
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    header {
+        gap: 8px;
+    }
+    button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+    .modal-content {
+        padding: 20px;
+    }
+    input, select {
+        font-size: 14px;
+    }
+    .event {
+        padding: 12px;
+    }
+}

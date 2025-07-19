@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Hank</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reitsport Turnier Übersicht</title>
+</head>
+<body>
+    <header>
+        <h1>Turnier Übersicht</h1>
+        <button id="add-event">Neuen Termin hinzufügen</button>
+        <button id="manage-db">DB Verwalten (Kameraleute/Orte)</button>
+        <button id="show-archive">Archiv</button>
+    </header>
+    <main id="overview">
+        <!-- Termine werden hier geladen -->
+    </main>
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Termin Details</h2>
+            <form id="event-form" onsubmit="return false;">
+                <!-- Form Felder hier -->
+            </form>
+        </div>
+    </div>
+    <div id="db-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>DB Verwalten</h2>
+            <section>
+                <h3>Kameraleute</h3>
+                <input id="cam-name" placeholder="Name">
+                <input id="cam-location" placeholder="Wohnort (z.B. Berlin)">
+                <button onclick="addCameraman()">Hinzufügen</button>
+                <ul id="cam-list"></ul>
+            </section>
+            <section>
+                <h3>Orte</h3>
+                <input id="loc-name" placeholder="Ort (z.B. München)">
+                <button onclick="addLocation()">Hinzufügen</button>
+                <ul id="loc-list"></ul>
+            </section>
+        </div>
+    </div>
+    <div id="archive-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Archiv</h2>
+            <ul id="archive-list"></ul>
+        </div>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js(neuereVersion,stabiler'></script>
+<script src='https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
